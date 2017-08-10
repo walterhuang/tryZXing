@@ -1,0 +1,28 @@
+﻿<Window x:Class="TryZXing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TryZXing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="BarcodeFormatSelector">
+            <ComboBoxItem>CODE_128</ComboBoxItem>
+            <ComboBoxItem>DATA_MATRIX</ComboBoxItem>
+        </ComboBox>
+        <TextBox Grid.Row="1" x:Name="BarcodeContentTextBox" Text="40206141411234567890"/>
+        <Button Grid.Row="2" x:Name="GenerateBarcodeButton" Content="Make Barcode" Click="GenerateBarcodeButton_Click"/>
+        <Button Grid.Row="3" x:Name="CreateGS1128Button" Content="GS1-128 Sample" Click="CreateGS1128Button_Click"/>
+        <Button Grid.Row="4" x:Name="CreateGS1DataMatrixButton" Content="GS1 DataMatrix Sample" Click="CreateGS1DataMatrixButton_Click"/>
+        <Image Grid.Row="5" x:Name="BarcodeImage"/>
+    </Grid>
+</Window>
